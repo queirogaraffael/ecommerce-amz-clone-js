@@ -1,0 +1,13 @@
+@import url('base/reset.css');
+@import url('components/navbar.css');
+@import url('components/sidebar.css');
+@import url('components/product-card.css');
+@import url('components/cart.css');
+@import url('components/checkout.css');
+@import url('pages/home.css');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}

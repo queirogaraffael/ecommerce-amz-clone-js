@@ -1,0 +1,44 @@
+.checkout-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.checkout-form input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.checkout-form .flex-group {
+    display: flex;
+    gap: 15px;
+}
+.checkout-form .flex-group > div {
+    flex: 1;
+}
+.checkout-form .flex-group input {
+    width: calc(100% - 22px);
+}
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.success-message {
+    color: green;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.checkout-submit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}

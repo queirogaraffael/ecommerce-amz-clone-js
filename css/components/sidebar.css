@@ -1,0 +1,67 @@
+.fixed-categories {
+    background-color: #232f3e;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+    position: sticky;
+    top: 60px;
+    z-index: 9;
+}
+.toggle-btn {
+    cursor: pointer;
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: white;
+    padding: 0;
+    line-height: 1;
+}
+.fixed-categories .category-item {
+    cursor: pointer;
+    padding: 5px 0;
+    white-space: nowrap;
+    font-size: 14px;
+}
+.fixed-categories .category-item.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #222;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    color: white;
+}
+.sidebar.open {
+    width: 250px;
+}
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ccc;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    color: white;
+    background-color: #444;
+}
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Notebook Gamer Ultra 5000",
+    "price": 5500.00,
+    "category": "eletronicos",
+    "description": "Potente para jogos, com placa de vídeo de última geração e processador i9.",
+    "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/590265/Msi-Creator-Pro-16-Intel-Core-Ultra-9-185h-RTX-5000-Ada-Tela-16-Uhd-SSD-4TB-Nvme-Ram-64gb_1717500792_gg.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Smart TV 55 polegadas 4K",
+    "price": 3200.00,
+    "category": "eletronicos",
+    "description": "Qualidade de imagem 4K, design sem bordas e sistema operacional smart.",
+    "image": "https://a-static.mlcdn.com.br/1500x1500/smart-tv-samsung-55-polegadas-4k-crystal-uhd-usb-55au8000/carrefouroficial/900003493/96b5e9d6d4d1cab94a8b37d778cb31d5.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "O Senhor dos Anéis: Trilogia",
+    "price": 79.90,
+    "category": "livros",
+    "description": "Edição completa da trilogia clássica da literatura fantástica de J.R.R. Tolkien.",
+    "image": "https://a-static.mlcdn.com.br/1500x1500/trilogia-o-senhor-dos-aneis-em-capa-dura-o-hobbit-capa-dura/institutobeneficenteboanova/86570/c9cd741e1289b7579983c047a63e299f.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Vestido Floral de Verão",
+    "price": 120.00,
+    "category": "moda",
+    "description": "Leve e elegante, ideal para dias quentes e eventos casuais.",
+    "image": "https://divamoderna.com.br/cdn/shop/files/SHEIN_VCAY_Vestido_De_Alas_De_Espaguete_Com_Decote_Em_V_E_Estampa_De_Flores__SHEIN_Brasil_main_5_1340x.jpg?v=1757384695"
+  },
+  {
+    "id": 5,
+    "name": "Kit de Panelas Antiaderentes",
+    "price": 250.00,
+    "category": "casa",
+    "description": "Conjunto com 5 peças, fáceis de limpar e perfeitas para o dia a dia.",
+    "image": "https://m.media-amazon.com/images/I/61idC1uINlL.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Bola de Futebol Profissional",
+    "price": 85.50,
+    "category": "esportes",
+    "description": "Com tecnologia de alta durabilidade, para treinos e jogos.",
+    "image": "https://cdn.sistemawbuy.com.br/arquivos/a081c7402e403ee31b3e5daf304c6ae4/produtos/659c249f9322d/15336266377-bola-campo-penalty-lider-amarelo-laranja-1-681cbf44880bb.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Fone de Ouvido Bluetooth",
+    "price": 180.00,
+    "category": "eletronicos",
+    "description": "Conforto e qualidade de som, com bateria de longa duração.",
+    "image": "https://cdn.sistemawbuy.com.br/arquivos/b0c36266e1a9271e949cf113bd58d369/produtos/6483ad9f0956a/a1-6483ad9f41d41_mini.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Kindle Paperwhite 11ª Geração",
+    "price": 699.00,
+    "category": "livros",
+    "description": "Tela sem reflexo, luz embutida ajustável e resistência à água.",
+    "image": "https://api.store.vivo.com.br/medias/96Wx96H-22023233-kindle-11-geracao-16-gb-modelo-2024-preto-app-.jpg?context=bWFzdGVyfHByb2R1Y3RpbWFnZXN8NTM1M3xpbWFnZS9qcGVnfGFHUXpMMmhpWlM4NU5EazFNVE01TnpjNE5Ua3dMemsyVjNnNU5raGZNakl3TWpNeU16TmZhMmx1Wkd4bExURXhMV2RsY21GallXOHRNVFl0WjJJdGJXOWtaV3h2TFRJd01qUXRjSEpsZEc4Z0tHRndjQ2t1YW5CbnxmMzRmZDI3MzVjZDM3NzZiNzA2MTE4MmMzZmIxZjUyODAxNzU0YzQ1NjIzNDE1MmRhOTIzY2ZlMTAzNzEwN2Rm"
+  },
+  {
+    "id": 9,
+    "name": "Tênis de Corrida Leve",
+    "price": 250.00,
+    "category": "esportes",
+    "description": "Conforto e amortecimento para corridas urbanas e treinos diários.",
+    "image": "https://static.netshoes.com.br/produtos/tenis-feminino-academia-corrida-advanced-run-professional-ultra-leve/06/0D2-1345-006/0D2-1345-006_zoom1.jpg?ts=1699288926"
+  },
+  {
+    "id": 10,
+    "name": "Máquina de Café Espresso",
+    "price": 899.00,
+    "category": "casa",
+    "description": "Prepare seu café favorito em casa com apenas um toque.",
+    "image": "https://carrefourbr.vtexassets.com/arquivos/ids/101411222/cb34161e99dd4bf49099c9ccbf6dafa5.jpg?v=638119664901500000"
+  },
+  {
+    "id": 11,
+    "name": "Calça Jeans Slim Fit",
+    "price": 150.00,
+    "category": "roupas",
+    "description": "Jeans de corte moderno e confortável, perfeito para qualquer ocasião.",
+    "image": "https://images.tcdn.com.br/img/img_prod/1249807/cala_jeans_slim_fit_masculina_lavagem_mdia_dialogo_1_20250730141554_0f88b7f0f3de.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Sandália de Couro",
+    "price": 89.90,
+    "category": "calcados",
+    "description": "Conforto e estilo, ideal para o verão.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYyv0tVORHUtp7OBsRKs4shmOhV5DBIyuTeA&s"
+  },
+  {
+    "id": 13,
+    "name": "Tênis Casual Branco",
+    "price": 175.00,
+    "category": "calcados",
+    "description": "Um clássico versátil que combina com tudo, do jeans ao shorts.",
+    "image": "https://bellindashoes.com.br/cdn/shop/files/2_7bdfd4fb-9e9f-4b73-aacb-702c1d8002d3.png?v=1751484608"
+  },
+  {
+    "id": 14,
+    "name": "Câmera Digital Canon EOS Rebel T7",
+    "price": 2800.00,
+    "category": "eletronicos",
+    "description": "Captura fotos e vídeos com alta resolução. Ideal para iniciantes na fotografia.",
+    "image": "https://m.media-amazon.com/images/I/714hINuPoBL._UF894,1000_QL80_.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Moletom com Capuz",
+    "price": 95.00,
+    "category": "roupas",
+    "description": "Perfeito para dias mais frios, com tecido macio e confortável.",
+    "image": "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/rockfit/media/uploads/produtos/foto/fgxgglzw/moletom-preto-rockfit-7.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Micro-ondas Espelhado 30L",
+    "price": 450.00,
+    "category": "casa",
+    "description": "Design moderno com acabamento espelhado, diversas funções para o dia a dia.",
+    "image": "https://a-static.mlcdn.com.br/800x560/micro-ondas-lg-30-litros-prata-espelhado-easyclean-ms3095lr-127-volts/friopecas/127925/f4c2378f08b11632bc710123e26e9e48.jpeg"
+  },
+  {
+    "id": 17,
+    "name": "Conjunto de Faixas de Resistência",
+    "price": 60.00,
+    "category": "esportes",
+    "description": "Ideal para treinos de força e reabilitação, com diferentes níveis de resistência.",
+    "image": "https://a-static.mlcdn.com.br/800x560/conjunto-de-faixas-de-resistencia-de-150lb-para-treinamento-em-casa-exercicios-de-gluteos-expansor-others/aliexpress/204272257/529d196b145561f925d571a42d600355.jpeg"
+  },
+  {
+    "id": 18,
+    "name": "As Crônicas de Nárnia: Volume Único",
+    "price": 110.00,
+    "category": "livros",
+    "description": "Todos os sete livros em um volume, com ilustrações originais de Pauline Baynes.",
+    "image": "https://m.media-amazon.com/images/I/81HsLWLrCzL.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Jaqueta Corta-Vento Esportiva",
+    "price": 180.00,
+    "category": "roupas",
+    "description": "Proteção contra o vento e leveza para atividades ao ar livre.",
+    "image": "https://cdn.sistemawbuy.com.br/arquivos/178b0084287f37cae1eb7de09418d9f2/produtos/VOU6RIO7/corta-vento-lupo-fem-77121-001-1a-foto-6351a76ebaab2.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Bota de Trekking Impermeável",
+    "price": 320.00,
+    "category": "calcados",
+    "description": "Feita para trilhas, com solado robusto e proteção contra umidade.",
+    "image": "https://thewhiteisland.com/cdn/shop/files/S5e956c5762ce42c385e94435a19cfebeB.webp?v=1725913861&width=800"
+  },
+  {
+    "id": 21,
+    "name": "Relógio Inteligente Smartwatch",
+    "price": 499.00,
+    "category": "eletronicos",
+    "description": "Monitora sua saúde e atividades físicas, com notificações do celular na tela.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYMiwV7_byQjifdM2iknNWsQACN1Z5NRi3ow&s"
+  },
+  {
+    "id": 22,
+    "name": "Copo Térmico com Tampa",
+    "price": 75.00,
+    "category": "casa",
+    "description": "Mantém sua bebida gelada por 12h ou quente por 6h. Perfeito para o dia a dia.",
+    "image": "https://images.tcdn.com.br/img/img_prod/1169820/copo_termico_coffee_preto_473ml_viktwastanley_1125_2_ec727139742210e0c69309b0106a42da.jpeg"
+  },
+  {
+    "id": 23,
+    "name": "Jaqueta de Couro Sintético",
+    "price": 250.00,
+    "category": "moda",
+    "description": "Um clássico atemporal que adiciona atitude ao seu visual.",
+    "image": "https://cdn.dooca.store/6878/products/cavfqqm4tev9p6j9qfsonrxpwq6iqmtlkeds_2000x2300.jpg?v=1682709951&webp=0"
+  },
+  {
+    "id": 24,
+    "name": "Violão Acústico para Iniciantes",
+    "price": 350.00,
+    "category": "esportes",
+    "description": "Instrumento musical de qualidade para quem está começando a aprender a tocar.",
+    "image": "https://violaobrasil.com.br/wp-content/uploads/2024/01/GIANNINI-N-14Bk-Violao-Acustico-Preto.jpg"
+  },
+  {
+    "id": 25,
+    "name": "O Guia do Mochileiro das Galáxias",
+    "price": 45.90,
+    "category": "livros",
+    "description": "Uma aventura intergaláctica cheia de humor e crítica social.",
+    "image": "https://cdn.awsli.com.br/2500x2500/2495/2495784/produto/271064554dd20cb39a9.jpg"
+  }
+]
