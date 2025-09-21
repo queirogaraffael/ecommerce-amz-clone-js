@@ -1,112 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazon</title>
 
-    <link rel="icon" href="assets/imagens/favicon.jpg" type="image/jpeg">
+    <link rel="icon" href="assets/imagens/favicon.jpg" type="image/jpeg" />
 
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar">
-        <div class="logo">Amazon</div>
-        <div class="search-bar-container">
-            <select class="search-filter" id="category-filter">
-                <option value="all">Todas as Categorias</option>
-            </select>
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
-            </div>
+      <div class="logo">Amazon</div>
+      <div class="search-bar-container">
+        <select class="search-filter" id="category-filter">
+          <option value="all">Todas as Categorias</option>
+        </select>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Buscar produtos..."
+            aria-label="Buscar produtos"
+          />
         </div>
-        <div class="cart-icon" id="cart-icon">
-            🛒 <span class="cart-count" id="cart-count">0</span>
-        </div>
+      </div>
+      <div class="cart-icon" id="cart-icon">
+        🛒 <span class="cart-count" id="cart-count">0</span>
+      </div>
     </nav>
     <div class="fixed-categories">
-        <button class="toggle-btn" id="open-nav-btn">☰</button>
-        <div class="category-item all active" data-category="all">Todos</div>
-        <div class="category-item" data-category="eletronicos">Eletrônicos</div>
-        <div class="category-item" data-category="livros">Livros</div>
-        <div class="category-item" data-category="moda">Moda</div>
-        <div class="category-item" data-category="casa">Casa</div>
-        <div class="category-item" data-category="esportes">Esportes</div>
-        <div class="category-item" data-category="ofertas">Ofertas do Dia</div>
+      <button class="toggle-btn" id="open-nav-btn">☰</button>
+      <div class="category-item all active" data-category="all">Todos</div>
+      <div class="category-item" data-category="eletronicos">Eletrônicos</div>
+      <div class="category-item" data-category="livros">Livros</div>
+      <div class="category-item" data-category="moda">Moda</div>
+      <div class="category-item" data-category="casa">Casa</div>
+      <div class="category-item" data-category="esportes">Esportes</div>
+      <div class="category-item" data-category="ofertas">Ofertas do Dia</div>
     </div>
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" id="close-nav-btn">×</a>
-        <div style="padding: 15px 32px; font-size: 22px; font-weight: bold; color: white;">Olá, Visitante</div>
-        <a href="#" class="sidebar-link" data-section="products-container" data-filter="best_sellers">Mais Vendidos</a>
-        <a href="#" class="sidebar-link" data-section="products-container" data-filter="new">Novidades</a>
-        <hr>
-        <div style="padding: 15px 32px; font-size: 18px; font-weight: bold; color: white;">Comprar por categoria</div>
-        <a href="#" class="sidebar-link" data-section="products-container" data-filter="eletronicos">Eletrônicos</a>
-        <a href="#" class="sidebar-link" data-section="products-container" data-filter="roupas">Roupas</a>
-        <a href="#" class="sidebar-link" data-section="products-container" data-filter="calcados">Calçados</a>
-        <a href="#" class="sidebar-link" data-section="products-container" data-filter="livros">Livros</a>
-        <a href="#" class="sidebar-link" data-section="products-container" data-filter="esportes">Esportes</a>
+      <a href="javascript:void(0)" class="closebtn" id="close-nav-btn">×</a>
+      <div
+        style="
+          padding: 15px 32px;
+          font-size: 22px;
+          font-weight: bold;
+          color: white;
+        "
+      >
+        Olá, Visitante
+      </div>
+      <a
+        href="#"
+        class="sidebar-link"
+        data-section="products-container"
+        data-filter="best_sellers"
+        >Mais Vendidos</a
+      >
+      <a
+        href="#"
+        class="sidebar-link"
+        data-section="products-container"
+        data-filter="new"
+        >Novidades</a
+      >
+      <hr />
+      <div
+        style="
+          padding: 15px 32px;
+          font-size: 18px;
+          font-weight: bold;
+          color: white;
+        "
+      >
+        Comprar por categoria
+      </div>
+      <a
+        href="#"
+        class="sidebar-link"
+        data-section="products-container"
+        data-filter="eletronicos"
+        >Eletrônicos</a
+      >
+      <a
+        href="#"
+        class="sidebar-link"
+        data-section="products-container"
+        data-filter="roupas"
+        >Roupas</a
+      >
+      <a
+        href="#"
+        class="sidebar-link"
+        data-section="products-container"
+        data-filter="calcados"
+        >Calçados</a
+      >
+      <a
+        href="#"
+        class="sidebar-link"
+        data-section="products-container"
+        data-filter="livros"
+        >Livros</a
+      >
+      <a
+        href="#"
+        class="sidebar-link"
+        data-section="products-container"
+        data-filter="esportes"
+        >Esportes</a
+      >
     </div>
 
-    <section class="products-container" id="products-container">
-    </section>
+    <section class="products-container" id="products-container"></section>
 
-    <section id="product-detail">
-    </section>
+    <section id="product-detail"></section>
 
     <section id="cart-container">
-        <h2>Seu Carrinho de Compras</h2>
-        <div id="cart-items-list">
-        </div>
-        <div id="cart-empty-message" class="cart-empty-message">Seu carrinho está vazio.</div>
-        <div id="cart-summary" class="cart-summary">
-            <h3>Total: R$ <span id="cart-total">0.00</span></h3>
-            <button class="checkout-btn" id="checkout-btn">Finalizar Compra</button>
-        </div>
+      <h2>Seu Carrinho de Compras</h2>
+      <div id="cart-items-list"></div>
+      <div id="cart-empty-message" class="cart-empty-message">
+        Seu carrinho está vazio.
+      </div>
+      <div id="cart-summary" class="cart-summary">
+        <h3>Total: R$ <span id="cart-total">0.00</span></h3>
+        <button class="checkout-btn" id="checkout-btn">Finalizar Compra</button>
+      </div>
     </section>
 
     <section id="checkout-container">
-        <h2>Finalizar Compra</h2>
-        <form id="checkout-form" class="checkout-form">
-            <fieldset>
-                <legend>Informações de Entrega</legend>
-                <div>
-                    <label for="cep">CEP</label>
-                    <input type="text" id="cep" name="cep" required maxlength="9" placeholder="00000-000">
-                    <div id="cep-error" class="error-message" aria-live="polite"></div>
-                    <div id="cep-success" class="success-message" aria-live="polite"></div>
-                </div>
-                <div>
-                    <label for="logradouro">Rua</label>
-                    <input type="text" id="logradouro" name="logradouro" required>
-                </div>
-                <div class="flex-group">
-                    <div>
-                        <label for="numero">Número</label>
-                        <input type="text" id="numero" name="numero" required>
-                    </div>
-                    <div>
-                        <label for="bairro">Bairro</label>
-                        <input type="text" id="bairro" name="bairro" required>
-                    </div>
-                </div>
-                <div class="flex-group">
-                    <div>
-                        <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" name="cidade" required>
-                    </div>
-                    <div>
-                        <label for="uf">UF</label>
-                        <input type="text" id="uf" name="uf" required maxlength="2">
-                    </div>
-                </div>
-            </fieldset>
-            <button type="submit" class="checkout-submit-btn">Confirmar Pagamento</button>
-        </form>
+      <h2>Finalizar Compra</h2>
+      <form id="checkout-form" class="checkout-form">
+        <fieldset>
+          <legend>Informações de Entrega</legend>
+          <div>
+            <label for="cep">CEP</label>
+            <input
+              type="text"
+              id="cep"
+              name="cep"
+              required
+              maxlength="9"
+              placeholder="00000-000"
+            />
+            <div id="cep-error" class="error-message" aria-live="polite"></div>
+            <div
+              id="cep-success"
+              class="success-message"
+              aria-live="polite"
+            ></div>
+          </div>
+          <div>
+            <label for="logradouro">Rua</label>
+            <input type="text" id="logradouro" name="logradouro" required />
+          </div>
+          <div class="flex-group">
+            <div>
+              <label for="numero">Número</label>
+              <input type="text" id="numero" name="numero" required />
+            </div>
+            <div>
+              <label for="bairro">Bairro</label>
+              <input type="text" id="bairro" name="bairro" required />
+            </div>
+          </div>
+          <div class="flex-group">
+            <div>
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" name="cidade" required />
+            </div>
+            <div>
+              <label for="uf">UF</label>
+              <input type="text" id="uf" name="uf" required maxlength="2" />
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit" class="checkout-submit-btn">
+          Confirmar Pagamento
+        </button>
+      </form>
     </section>
-    
+
+    <footer class="footer">
+      <div class="footer-back-to-top">
+        <a href="#top">Voltar ao topo</a>
+      </div>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Conheça-nos</h4>
+          <ul>
+            <li><a href="#">Sobre a Amazon</a></li>
+            <li><a href="#">Carreira</a></li>
+            <li><a href="#">Comunidade</a></li>
+            <li><a href="#">Informações à imprensa</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Ganhando dinheiro com a gente</h4>
+          <ul>
+            <li><a href="#">Publique seus livros</a></li>
+            <li><a href="#">Venda na Amazon</a></li>
+            <li><a href="#">Programa de afiliados</a></li>
+            <li><a href="#">Anuncie seus produtos</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Pagamentos</h4>
+          <ul>
+            <li><a href="#">Amazon Business</a></li>
+            <li><a href="#">Compre com pontos</a></li>
+            <li><a href="#">Recarregue seu celular</a></li>
+            <li><a href="#">Cartões de presente</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Ajuda</h4>
+          <ul>
+            <li><a href="#">Sua conta</a></li>
+            <li><a href="#">Frete e prazo</a></li>
+            <li><a href="#">Devoluções e reembolso</a></li>
+            <li><a href="#">Gerenciar seu conteúdo e dispositivos</a></li>
+            <li><a href="#">Ajuda</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-logo">Amazon</div>
+        <div class="footer-copyright">
+          &copy; 1996-2025, Amazon.com.br ou suas afiliadas. Todos os direitos
+          reservados.
+        </div>
+      </div>
+    </footer>
+
     <script type="module" src="js/app.js"></script>
-</body>
+  </body>
 </html>
