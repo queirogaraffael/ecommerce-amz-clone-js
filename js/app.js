@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById("open-nav-btn").addEventListener('click', openNav);
     document.getElementById("close-nav-btn").addEventListener('click', closeNav);
 
-    // Configuração dos eventos de busca e filtro
+    // Configuração dos eventos de busca e filtro da barra fixa
     document.getElementById("search-input").addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase();
         const filtered = state.products.filter(p => 
@@ -83,10 +83,46 @@ document.addEventListener('DOMContentLoaded', async () => {
         item.addEventListener('click', (e) => {
             const category = e.target.getAttribute('data-category');
             showSection('products-container');
-            const filtered = category === 'all' ? state.products : state.products.filter(p => p.category === category);
+            
+            let filtered = state.products;
+
+            if (category === 'all') {
+                filtered = state.products;
+            } else if (category === 'ofertas') {
+                filtered = state.products.filter(p => p.is_offer);
+            } else {
+                filtered = state.products.filter(p => p.category === category);
+            }
+
             renderProducts(filtered, 'products-container', showProductDetail, handleAddToCartClick);
             document.querySelectorAll(".fixed-categories .category-item").forEach(el => el.classList.remove('active'));
             e.target.classList.add('active');
+        });
+    });
+
+    // Eventos da barra lateral (sidebar)
+    document.querySelectorAll(".sidebar-link").forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const sectionId = e.target.getAttribute('data-section');
+            const filterType = e.target.getAttribute('data-filter');
+            
+            showSection(sectionId);
+            let filteredProducts = state.products;
+
+            if (filterType === 'best_sellers') {
+                filteredProducts = state.products.filter(p => p.is_best_seller);
+            } else if (filterType === 'new') {
+                filteredProducts = state.products.filter(p => p.is_new);
+            } else if (filterType === 'offers') {
+                filteredProducts = state.products.filter(p => p.is_offer);
+            } else {
+                // Lógica para as categorias de produto
+                filteredProducts = state.products.filter(p => p.category === filterType);
+            }
+            
+            renderProducts(filteredProducts, 'products-container', showProductDetail, handleAddToCartClick);
+            closeNav(); // Fecha a sidebar após o clique
         });
     });
 
@@ -129,34 +165,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Configura os eventos do checkout
     setupCheckoutEvents();
-});
-
-
-// ... (seu código app.js existente)
-
-// Inicialização e Event Listeners
-document.addEventListener('DOMContentLoaded', async () => {
-    // ... (restante da inicialização)
-
-    // Eventos do menu hambúrguer e barra lateral
-    document.getElementById("open-nav-btn").addEventListener('click', openNav);
-    document.getElementById("close-nav-btn").addEventListener('click', closeNav);
-    
-    document.querySelectorAll(".sidebar-link").forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const sectionId = e.target.getAttribute('data-section');
-            const categoryFilter = e.target.getAttribute('data-filter');
-            
-            showSection(sectionId);
-            if (categoryFilter) {
-                const filtered = categoryFilter === 'all' 
-                    ? state.products 
-                    : state.products.filter(p => p.category === categoryFilter);
-                renderProducts(filtered, 'products-container', showProductDetail, handleAddToCartClick);
-            }
-            closeNav(); // Fecha a sidebar após o clique
-        });
-    });
-
 });
