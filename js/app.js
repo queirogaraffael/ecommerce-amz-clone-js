@@ -1,9 +1,8 @@
 import { renderProducts } from './product.js';
 import { showSection, updateCartDisplay, openNav, closeNav } from './ui.js';
 import { addToCart, updateQuantity, removeItem } from './cart.js';
-import { setupCheckoutEvents } from './checkout.js';
+import { setupCheckoutEvents, validateCheckoutForm } from './checkout.js';
 
-// Função para carregar os produtos do arquivo JSON
 async function fetchProducts() {
     try {
         const response = await fetch('data/products.json');
@@ -17,14 +16,12 @@ async function fetchProducts() {
     }
 }
 
-// Estado da aplicação
 const state = {
     products: [],
     cart: [],
     currentFilter: "all"
 };
 
-// Funções para manipular a exibição de detalhes e a lógica do carrinho
 function showProductDetail(productId) {
     showSection('product-detail');
     const product = state.products.find(p => p.id === productId);
@@ -44,7 +41,6 @@ function showProductDetail(productId) {
         </div>
     `;
 
-    document.getElementById("back-to-products").addEventListener('click', () => showSection('products-container'));
     document.getElementById("add-to-cart-detail-btn").addEventListener('click', () => {
         addToCart(state, productId);
         updateCartDisplay(state.cart);
@@ -56,73 +52,96 @@ function handleAddToCartClick(productId) {
     updateCartDisplay(state.cart);
 }
 
-// Inicialização e Event Listeners
+function applyFiltersAndSearch(filter = null, query = null) {
+    const category = filter || document.getElementById("category-filter").value;
+    const searchQuery = query || document.getElementById("search-input").value.toLowerCase();
+
+    state.currentFilter = category; 
+    showSection('products-container'); 
+
+    let filteredProducts = state.products;
+
+    if (category !== 'all') {
+        if (category === 'ofertas') {
+            filteredProducts = filteredProducts.filter(p => p.is_offer);
+        } else if (category === 'best_sellers') {
+            filteredProducts = filteredProducts.filter(p => p.is_best_seller);
+        } else if (category === 'new') {
+            filteredProducts = filteredProducts.filter(p => p.is_new);
+        } else {
+            filteredProducts = filteredProducts.filter(p => p.category === category);
+        }
+    }
+
+    if (searchQuery) {
+        filteredProducts = filteredProducts.filter(p =>
+            p.name.toLowerCase().includes(searchQuery) || p.category.toLowerCase().includes(searchQuery)
+        );
+    }
+
+    renderProducts(filteredProducts, 'products-container', showProductDetail, handleAddToCartClick);
+
+    document.querySelectorAll(".fixed-categories .category-item").forEach(el => el.classList.remove('active'));
+    const activeItem = document.querySelector(`.fixed-categories .category-item[data-category="${category}"]`);
+    if (activeItem) {
+        activeItem.classList.add('active');
+    }
+}
+
+function populateCategoryFilter() {
+    const categoryFilter = document.getElementById("category-filter");
+    const uniqueCategories = [...new Set(state.products.map(product => product.category))];
+
+    const categoryNames = {
+        "eletronicos": "Eletrônicos",
+        "livros": "Livros",
+        "moda": "Moda",
+        "casa": "Casa",
+        "esportes": "Esportes",
+        "roupas": "Roupas",
+        "calcados": "Calçados"
+    };
+
+    uniqueCategories.sort().forEach(category => {
+        const option = document.createElement("option");
+        option.value = category;
+        option.textContent = categoryNames[category] || category.charAt(0).toUpperCase() + category.slice(1);
+        categoryFilter.appendChild(option);
+    });
+}
+
+
 document.addEventListener('DOMContentLoaded', async () => {
     state.products = await fetchProducts();
     if (state.products.length > 0) {
-        renderProducts(state.products, 'products-container', showProductDetail, handleAddToCartClick);
+        populateCategoryFilter(); 
+        applyFiltersAndSearch(); 
     } else {
         document.getElementById("products-container").innerHTML = "<p style='text-align: center; font-size: 1.2em;'>Não foi possível carregar os produtos. Tente novamente mais tarde.</p>";
     }
     updateCartDisplay(state.cart);
 
-    // Eventos do menu hambúrguer
     document.getElementById("open-nav-btn").addEventListener('click', openNav);
     document.getElementById("close-nav-btn").addEventListener('click', closeNav);
 
-    // Configuração dos eventos de busca e filtro da barra fixa
-    document.getElementById("search-input").addEventListener("input", (e) => {
-        const query = e.target.value.toLowerCase();
-        const filtered = state.products.filter(p => 
-            p.name.toLowerCase().includes(query) || p.category.toLowerCase().includes(query)
-        );
-        renderProducts(filtered, 'products-container', showProductDetail, handleAddToCartClick);
-    });
+    document.getElementById("search-input").addEventListener("input", () => applyFiltersAndSearch(null, document.getElementById("search-input").value));
+    document.getElementById("category-filter").addEventListener("change", () => applyFiltersAndSearch(document.getElementById("category-filter").value, null));
 
     document.querySelectorAll(".fixed-categories .category-item").forEach(item => {
         item.addEventListener('click', (e) => {
             const category = e.target.getAttribute('data-category');
-            showSection('products-container');
-            
-            let filtered = state.products;
-
-            if (category === 'all') {
-                filtered = state.products;
-            } else if (category === 'ofertas') {
-                filtered = state.products.filter(p => p.is_offer);
-            } else {
-                filtered = state.products.filter(p => p.category === category);
-            }
-
-            renderProducts(filtered, 'products-container', showProductDetail, handleAddToCartClick);
-            document.querySelectorAll(".fixed-categories .category-item").forEach(el => el.classList.remove('active'));
-            e.target.classList.add('active');
+            document.getElementById("category-filter").value = "all"; 
+            applyFiltersAndSearch(category, null);
         });
     });
 
-    // Eventos da barra lateral (sidebar)
     document.querySelectorAll(".sidebar-link").forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const sectionId = e.target.getAttribute('data-section');
             const filterType = e.target.getAttribute('data-filter');
-            
-            showSection(sectionId);
-            let filteredProducts = state.products;
-
-            if (filterType === 'best_sellers') {
-                filteredProducts = state.products.filter(p => p.is_best_seller);
-            } else if (filterType === 'new') {
-                filteredProducts = state.products.filter(p => p.is_new);
-            } else if (filterType === 'offers') {
-                filteredProducts = state.products.filter(p => p.is_offer);
-            } else {
-                // Lógica para as categorias de produto
-                filteredProducts = state.products.filter(p => p.category === filterType);
-            }
-            
-            renderProducts(filteredProducts, 'products-container', showProductDetail, handleAddToCartClick);
-            closeNav(); // Fecha a sidebar após o clique
+            document.getElementById("category-filter").value = "all"; // Limpa o seletor
+            applyFiltersAndSearch(filterType, null);
+            closeNav();
         });
     });
 
@@ -130,8 +149,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         showSection('cart-container');
         updateCartDisplay(state.cart);
     });
+    
+    document.getElementById("back-to-products-from-cart").addEventListener('click', () => {
+        applyFiltersAndSearch(state.currentFilter);
+    });
 
-    // Eventos de manipulação de quantidade no carrinho
     document.getElementById("cart-items-list").addEventListener('click', (e) => {
         const target = e.target;
         if (target.classList.contains('cart-quantity-btn')) {
@@ -150,19 +172,34 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Evento do botão "Finalizar Compra" no carrinho
     document.getElementById("checkout-btn").addEventListener('click', () => {
         showSection('checkout-container');
     });
 
     document.getElementById("checkout-form").addEventListener("submit", (e) => {
         e.preventDefault();
-        alert("Compra finalizada com sucesso! Obrigado!");
-        state.cart = [];
-        updateCartDisplay(state.cart);
-        showSection('products-container');
+        if (validateCheckoutForm()) {
+            alert("Compra finalizada com sucesso! Obrigado!");
+            state.cart = [];
+            updateCartDisplay(state.cart);
+            applyFiltersAndSearch(); 
+        }
     });
 
-    // Configura os eventos do checkout
+    document.getElementById("product-detail").addEventListener('click', (e) => {
+        if (e.target.id === "back-to-products") {
+            applyFiltersAndSearch(state.currentFilter);
+        }
+    });
+
     setupCheckoutEvents();
+
+    document.addEventListener('click', (e) => {
+        const sidebar = document.getElementById("mySidebar");
+        const openBtn = document.getElementById("open-nav-btn");
+        
+        if (sidebar.classList.contains('open') && !sidebar.contains(e.target) && e.target !== openBtn) {
+            closeNav();
+        }
+    });
 });

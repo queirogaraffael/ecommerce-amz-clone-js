@@ -116,9 +116,10 @@
 
     <section class="products-container" id="products-container"></section>
 
-    <section id="product-detail"></section>
+    <section id="product-detail" class="hidden"></section>
 
-    <section id="cart-container">
+    <section id="cart-container" class="hidden">
+      <button id="back-to-products-from-cart" style="margin-bottom: 20px;">← Voltar</button>
       <h2>Seu Carrinho de Compras</h2>
       <div id="cart-items-list"></div>
       <div id="cart-empty-message" class="cart-empty-message">
@@ -130,7 +131,7 @@
       </div>
     </section>
 
-    <section id="checkout-container">
+    <section id="checkout-container" class="hidden">
       <h2>Finalizar Compra</h2>
       <form id="checkout-form" class="checkout-form">
         <fieldset>

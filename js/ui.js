@@ -1,16 +1,16 @@
 export function showSection(sectionId) {
     const sections = document.querySelectorAll('section');
-    sections.forEach(s => s.style.display = 'none');
-    document.getElementById(sectionId).style.display = 'block';
+    sections.forEach(s => s.classList.add('hidden'));
+    document.getElementById(sectionId).classList.remove('hidden');
 }
 
 export function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("mySidebar").classList.add("open");
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 export function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("mySidebar").classList.remove("open");
     document.body.style.backgroundColor = "white";
 }
 

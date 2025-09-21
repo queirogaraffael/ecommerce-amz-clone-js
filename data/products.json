@@ -256,9 +256,9 @@
         "id": 24,
         "name": "Violão Acústico para Iniciantes",
         "price": 350.00,
-        "category": "esportes",
+        "category": "musica",
         "is_best_seller": false,
-        "is_offer": false,
+        "is_offer": true,
         "is_new": true,
         "description": "Instrumento musical de qualidade para quem está começando a aprender a tocar.",
         "image": "https://violaobrasil.com.br/wp-content/uploads/2024/01/GIANNINI-N-14Bk-Violao-Acustico-Preto.jpg"
@@ -273,5 +273,60 @@
         "is_new": false,
         "description": "Uma aventura intergaláctica cheia de humor e crítica social.",
         "image": "https://cdn.awsli.com.br/2500x2500/2495/2495784/produto/271064554dd20cb39a9.jpg"
+    },
+    {
+        "id": 26,
+        "name": "Bicicleta Ergométrica Vertical",
+        "price": 750.00,
+        "category": "esportes",
+        "is_best_seller": false,
+        "is_offer": false,
+        "is_new": true,
+        "description": "Ideal para exercícios cardiovasculares em casa. Compacta e silenciosa.",
+        "image": "https://images.tcdn.com.br/img/img_prod/775128/bike_ergometrica_vertical_rae_2307_1_c48726dce3b2296a520a5ba5257d1f8c.jpg"
+    },
+    {
+        "id": 27,
+        "name": "Headset Gamer com Microfone",
+        "price": 280.00,
+        "category": "eletronicos",
+        "is_best_seller": true,
+        "is_offer": false,
+        "is_new": false,
+        "description": "Áudio imersivo e microfone com cancelamento de ruído. Conforto para longas sessões de jogo.",
+        "image": "https://images.tcdn.com.br/img/img_prod/406359/headphone_gamer_para_ps4_pc_celular_com_microfone_articulado_led_rgb_7_cores_almofada_extra_macia_gh_2781_1_fc011894f2d7616f79077d57564e82eb_20220707114640.jpeg"
+    },
+    {
+        "id": 28,
+        "name": "O Hobbit",
+        "price": 55.00,
+        "category": "livros",
+        "is_best_seller": true,
+        "is_offer": false,
+        "is_new": false,
+        "description": "Edição clássica do livro de J.R.R. Tolkien que antecede a trilogia O Senhor dos Anéis.",
+        "image": "https://lojaleiturinha.vtexassets.com/arquivos/ids/155751-800-800?v=638337601360070000&width=800&height=800&aspect=true"
+    },
+    {
+        "id": 29,
+        "name": "Tênis Esportivo Casual",
+        "price": 199.90,
+        "category": "calcados",
+        "is_best_seller": false,
+        "is_offer": true,
+        "is_new": false,
+        "description": "Design moderno e confortável, ideal para o uso diário e caminhadas leves.",
+        "image": "https://newsunset.com.br/cdn/shop/products/H38be87a3639b4fd9b1bd0e8134372b99q.jpg?v=1633663301"
+    },
+    {
+        "id": 30,
+        "name": "Aparador de Livros Decorativo",
+        "price": 85.00,
+        "category": "casa",
+        "is_best_seller": false,
+        "is_offer": false,
+        "is_new": true,
+        "description": "Feito de metal com design exclusivo para decorar e organizar sua estante.",
+        "image": "https://images.tcdn.com.br/img/img_prod/475075/aparador_de_livros_decorativo_em_resina_preto_mate_21x27x12_cm_d_rossi_58679_2_90a37845e037ffaf860b92a8d47945f6.jpg"
     }
 ]

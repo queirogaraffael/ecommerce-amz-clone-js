@@ -1,5 +1,4 @@
 #cart-container, #checkout-container, #product-detail {
-    display: none;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
@@ -52,4 +51,9 @@
 .cart-empty-message {
     text-align: center;
     color: #555;
+}
+
+/* Nova classe para ocultar seções */
+.hidden {
+    display: none;
 }

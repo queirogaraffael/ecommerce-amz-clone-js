@@ -8,9 +8,42 @@ export function setupCheckoutEvents() {
     const ufInput = document.getElementById("uf");
     const numeroInput = document.getElementById("numero");
     
+    const requiredInputs = [logradouroInput, numeroInput, bairroInput, cidadeInput, ufInput];
+    requiredInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            input.style.border = "1px solid #ccc";
+        });
+    });
+
+    const resetAddressFields = () => {
+        logradouroInput.readOnly = false;
+        bairroInput.readOnly = false;
+        cidadeInput.readOnly = false;
+        ufInput.readOnly = false;
+        logradouroInput.value = '';
+        bairroInput.value = '';
+        cidadeInput.value = '';
+        ufInput.value = '';
+        cepError.textContent = '';
+        cepSuccess.textContent = '';
+    };
+
+    // Adiciona listener para desbloquear campos de endereço quando o usuário tenta digitar
+    const addressInputs = [logradouroInput, bairroInput, cidadeInput, ufInput];
+    addressInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            input.readOnly = false;
+        });
+    });
+
     cepInput.addEventListener('input', async (e) => {
         const cep = e.target.value.replace(/\D/g, '');
         cepInput.value = cep.replace(/^(\d{5})(\d{3})$/, '$1-$2');
+
+        if (cep.length < 8) {
+            resetAddressFields();
+            return;
+        }
 
         if (cep.length === 8) {
             cepError.textContent = '';
@@ -26,20 +59,21 @@ export function setupCheckoutEvents() {
                     bairroInput.readOnly = false;
                     cidadeInput.readOnly = false;
                     ufInput.readOnly = false;
-                    logradouroInput.value = '';
-                    bairroInput.value = '';
-                    cidadeInput.value = '';
-                    ufInput.value = '';
                 } else {
-                    logradouroInput.value = data.logradouro;
-                    bairroInput.value = data.bairro;
+                    // Preenche apenas a cidade e o estado, deixando o resto em branco para o usuário
                     cidadeInput.value = data.localidade;
                     ufInput.value = data.uf;
-                    cepSuccess.textContent = 'Endereço encontrado!';
-                    logradouroInput.readOnly = true;
-                    bairroInput.readOnly = true;
+                    cepSuccess.textContent = 'Cidade e estado encontrados!';
+
+                    logradouroInput.value = '';
+                    bairroInput.value = '';
+                    
+                    // Apenas cidade e estado serão somente leitura, o resto pode ser editado
+                    logradouroInput.readOnly = false;
+                    bairroInput.readOnly = false;
                     cidadeInput.readOnly = true;
                     ufInput.readOnly = true;
+
                     numeroInput.focus();
                 }
             } catch (error) {
@@ -50,13 +84,36 @@ export function setupCheckoutEvents() {
                 cidadeInput.readOnly = false;
                 ufInput.readOnly = false;
             }
-        } else {
-            cepError.textContent = '';
-            cepSuccess.textContent = '';
-            logradouroInput.readOnly = false;
-            bairroInput.readOnly = false;
-            cidadeInput.readOnly = false;
-            ufInput.readOnly = false;
         }
     });
+}
+
+export function validateCheckoutForm() {
+    const form = document.getElementById("checkout-form");
+    const inputs = form.querySelectorAll("input[required]");
+    let allFieldsValid = true;
+
+    inputs.forEach(input => {
+        if (input.id === "cep") {
+            if (input.value.replace(/\D/g, '').length < 8) {
+                allFieldsValid = false;
+                input.style.border = "2px solid red";
+            } else {
+                input.style.border = "1px solid #ccc";
+            }
+        } else {
+            if (!input.value.trim()) {
+                allFieldsValid = false;
+                input.style.border = "2px solid red";
+            } else {
+                input.style.border = "1px solid #ccc";
+            }
+        }
+    });
+
+    if (!allFieldsValid) {
+        alert("Por favor, preencha todos os campos obrigatórios para finalizar a compra.");
+    }
+
+    return allFieldsValid;
 }
