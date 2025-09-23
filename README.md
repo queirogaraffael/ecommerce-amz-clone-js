@@ -4,6 +4,25 @@ Projeto de **loja virtual** desenvolvido com **HTML5, CSS3 e JavaScript (ES6+)**
 Inclui catálogo de produtos dinâmico, carrinho de compras com persistência e fluxo de checkout com integração à API **ViaCEP** para preenchimento automático de endereço.
 
 ---
+## 📖 Sobre o Projeto
+
+Este projeto foi construído como parte de uma fase prática de estudos, com o objetivo de aplicar conceitos fundamentais de programação web:
+
+- **Lógica de programação e arrays**
+- **Funções (arrow functions e HOFs)**
+- **Manipulação do DOM e eventos**
+- **Programação orientada a objetos (classes em JS)**
+- **Assíncrono (fetch/async/await)**
+- **Tratamento de erros**
+- **Acessibilidade (aria-live, foco automático no checkout)**
+
+A ideia foi simular um **e-commerce simples**, cobrindo todo o fluxo básico:
+
+1. Catálogo de produtos com filtros e busca  
+2. Detalhe do produto  
+3. Carrinho de compras (CRUD de itens e totais)  
+4. Checkout com preenchimento automático via CEP  
+
 
 ## 🎯 Finalidade do Projeto
 
