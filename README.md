@@ -91,24 +91,24 @@ e-commerce-js/
 
 ## 🚀 Como Executar Localmente
 
-1. Clone o repositório:
+## 1. Clone o repositório:
    ```bash
    git clone https://github.com/queirogaraffael/e-commerce-js.git
    cd e-commerce-js
 ⚠️ Alguns navegadores bloqueiam requisições locais ao products.json e à API ViaCEP. Para evitar problemas, rode um servidor simples:
 
-2. Abra o arquivo index.html diretamente no navegador
-# Python 3
+## 2. Abra o arquivo index.html diretamente no navegador
+Python 3
 python -m http.server 5173
 
-# ou Node.js (http-server)
+ou Node.js (http-server)
 npx http-server -p 5173
 
-3. Acesse no navegador:
+## 3. Acesse no navegador:
 👉 http://localhost:5173
 
 
-🔧 Tecnologias Utilizadas
+## 🔧 Tecnologias Utilizadas
 
 HTML5 → marcação semântica
 
@@ -126,7 +126,7 @@ fetch / async/await → requisições assíncronas
 
 Tratamento de erros → mensagens claras e acessíveis
 
-📸 Telas (exemplos)
+## 📸 Telas (exemplos)
 
 Home / Catálogo
 
@@ -136,7 +136,7 @@ Checkout (com ViaCEP)
 
 (adicione prints em /assets/screenshots/ e referencie aqui)
 
-🗺️ Roadmap de Melhorias
+## 🗺️ Roadmap de Melhorias
 
  Filtros por categoria avançados
 
@@ -152,6 +152,6 @@ Checkout (com ViaCEP)
 
  Feedback visual avançado (toasts, loaders)
 
-👨‍💻 Autor
+## 👨‍💻 Autor
 
 Raffael Queiroga — @queirogaraffael
