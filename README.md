@@ -22,7 +22,7 @@ A ideia foi simular um **e-commerce simples**, cobrindo todo o fluxo básico:
 2. Detalhe do produto  
 3. Carrinho de compras (CRUD de itens e totais)  
 4. Checkout com preenchimento automático via CEP  
-
+---
 
 ## 🎯 Finalidade do Projeto
 
