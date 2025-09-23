@@ -69,23 +69,23 @@ Este projeto foi construído como parte de uma fase prática de estudos, com o o
 ## 📂 Estrutura do Projeto
 
 e-commerce-js/
-├─ index.html # página inicial
-├─ /assets/imagens/ # imagens e favicon
-├─ /css/ # estilos
-│ ├─ style.css # estilo principal
-│ ├─ /base/ # estilos base/reset/footer
-│ ├─ /components/ # estilos de componentes (cart, navbar etc.)
-│ └─ /pages/ # estilos específicos de páginas
-├─ /data/
-│ └─ products.json # catálogo mock de produtos
-├─ /js/ # scripts JS
-│ ├─ app.js # inicialização
-│ ├─ cart.js # lógica do carrinho
-│ ├─ checkout.js # fluxo de checkout e ViaCEP
-│ ├─ product.js # manipulação de produtos
-│ └─ ui.js # renderização e DOM
+- ├─ index.html # página inicial
+- ├─ /assets/imagens/ # imagens e favicon
+- ├─ /css/ # estilos
+- │ ├─ style.css # estilo principal
+- │ ├─ /base/ # estilos base/reset/footer
+- │ ├─ /components/ # estilos de componentes (cart, navbar etc.)
+- │ └─ /pages/ # estilos específicos de páginas
+- ├─ /data/
+- │ └─ products.json # catálogo mock de produtos
+- ├─ /js/ # scripts JS
+- │ ├─ app.js # inicialização
+- │ ├─ cart.js # lógica do carrinho
+- │ ├─ checkout.js # fluxo de checkout e ViaCEP
+- │ ├─ product.js # manipulação de produtos
+- │ └─ ui.js # renderização e DOM
 
-
+---
 
 ## 🚀 Como Executar Localmente
 
@@ -93,9 +93,10 @@ e-commerce-js/
    ```bash
    git clone https://github.com/queirogaraffael/e-commerce-js.git
    cd e-commerce-js
+
 ⚠️ Alguns navegadores bloqueiam requisições locais ao products.json e à API ViaCEP. Para evitar problemas, rode um servidor simples:
 
-### 2. Abra o arquivo index.html diretamente no navegador
+### 2. Abra o arquivo index.html diretamente no navegador: 
 Python 3
 python -m http.server 5173
 
@@ -104,6 +105,8 @@ npx http-server -p 5173
 
 ### 3. Acesse no navegador:
 👉 http://localhost:5173
+
+--- 
 
 
 ## 🔧 Tecnologias Utilizadas
@@ -124,6 +127,8 @@ fetch / async/await → requisições assíncronas
 
 Tratamento de erros → mensagens claras e acessíveis
 
+---
+
 ## 📸 Telas (exemplos)
 
 Home / Catálogo
@@ -133,6 +138,8 @@ Carrinho lateral
 Checkout (com ViaCEP)
 
 (adicione prints em /assets/screenshots/ e referencie aqui)
+
+---
 
 ## 🗺️ Roadmap de Melhorias
 
@@ -149,6 +156,8 @@ Checkout (com ViaCEP)
  Testes unitários (cart.js e checkout.js)
 
  Feedback visual avançado (toasts, loaders)
+
+---
 
 ## 👨‍💻 Autor
 
