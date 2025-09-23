@@ -87,24 +87,22 @@ e-commerce-js/
 
 
 
----
-
 ## 🚀 Como Executar Localmente
 
-## 1. Clone o repositório:
+### 1. Clone o repositório:
    ```bash
    git clone https://github.com/queirogaraffael/e-commerce-js.git
    cd e-commerce-js
 ⚠️ Alguns navegadores bloqueiam requisições locais ao products.json e à API ViaCEP. Para evitar problemas, rode um servidor simples:
 
-## 2. Abra o arquivo index.html diretamente no navegador
+### 2. Abra o arquivo index.html diretamente no navegador
 Python 3
 python -m http.server 5173
 
 ou Node.js (http-server)
 npx http-server -p 5173
 
-## 3. Acesse no navegador:
+### 3. Acesse no navegador:
 👉 http://localhost:5173
 
 
