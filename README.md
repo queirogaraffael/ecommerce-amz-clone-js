@@ -69,28 +69,27 @@ Este projeto foi construído como parte de uma fase prática de estudos, com o o
 ## 📂 Estrutura do Projeto
 
 e-commerce-js/
-- ├─ index.html # página inicial
-- ├─ /assets/imagens/ # imagens e favicon
-- ├─ /css/ # estilos
-- │ ├─ style.css # estilo principal
-- │ ├─ /base/ # estilos base/reset/footer
-- │ ├─ /components/ # estilos de componentes (cart, navbar etc.)
-- │ └─ /pages/ # estilos específicos de páginas
-- ├─ /data/
-- │ └─ products.json # catálogo mock de produtos
-- ├─ /js/ # scripts JS
-- │ ├─ app.js # inicialização
-- │ ├─ cart.js # lógica do carrinho
-- │ ├─ checkout.js # fluxo de checkout e ViaCEP
-- │ ├─ product.js # manipulação de produtos
-- │ └─ ui.js # renderização e DOM
+- index.html # página inicial
+- /assets/imagens/ # imagens e favicon
+- /css/ # estilos
+- style.css # estilo principal
+- /base/ # estilos base/reset/footer
+- /components/ # estilos de componentes (cart, navbar etc.)
+- /pages/ # estilos específicos de páginas
+- /data/
+- products.json # catálogo mock de produtos
+- /js/ # scripts JS
+- app.js # inicialização
+- cart.js # lógica do carrinho
+- checkout.js # fluxo de checkout e ViaCEP
+- product.js # manipulação de produtos
+- ui.js # renderização e DOM
 
 ---
 
 ## 🚀 Como Executar Localmente
 
 ### 1. Clone o repositório:
-   ```bash
    git clone https://github.com/queirogaraffael/e-commerce-js.git
    cd e-commerce-js
 
@@ -111,54 +110,54 @@ npx http-server -p 5173
 
 ## 🔧 Tecnologias Utilizadas
 
-HTML5 → marcação semântica
+- HTML5 → marcação semântica
 
-CSS3 → estilização modular e responsiva
+- CSS3 → estilização modular e responsiva
 
-JavaScript (ES6+) → manipulação do DOM e lógica de negócio
+- JavaScript (ES6+) → manipulação do DOM e lógica de negócio
 
-localStorage → persistência do carrinho
+- localStorage → persistência do carrinho
 
-JSON → simulação de catálogo de produtos
+- JSON → simulação de catálogo de produtos
 
-ViaCEP API → preenchimento automático de endereço no checkout
+- ViaCEP API → preenchimento automático de endereço no checkout
 
-fetch / async/await → requisições assíncronas
+- fetch / async/await → requisições assíncronas
 
-Tratamento de erros → mensagens claras e acessíveis
+- Tratamento de erros → mensagens claras e acessíveis
 
 ---
 
 ## 📸 Telas (exemplos)
 
-Home / Catálogo
+- Home / Catálogo
 
-Carrinho lateral
+- Carrinho lateral
 
-Checkout (com ViaCEP)
+- Checkout (com ViaCEP)
 
 (adicione prints em /assets/screenshots/ e referencie aqui)
 
 ---
 
-## 🗺️ Roadmap de Melhorias
+ ## 🗺️ Roadmap de Melhorias  
 
- Filtros por categoria avançados
+ - Filtros por categoria avançados
 
- Busca em tempo real
+ - Busca em tempo real
 
- Cupom de desconto
+ - Cupom de desconto
 
- Paginação ou scroll infinito
+ - Paginação ou scroll infinito
 
- Integração com gateway de pagamento real (Stripe, Mercado Pago etc.)
+ - Integração com gateway de pagamento real (Stripe, Mercado Pago etc.)
 
- Testes unitários (cart.js e checkout.js)
+ - Testes unitários (cart.js e checkout.js)
 
- Feedback visual avançado (toasts, loaders)
+ - Feedback visual avançado (toasts, loaders)
 
 ---
 
 ## 👨‍💻 Autor
 
-Raffael Queiroga — @queirogaraffael
+- Raffael Queiroga — @queirogaraffael
