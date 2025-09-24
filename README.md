@@ -89,7 +89,7 @@ Este projeto foi construído como parte de uma fase prática de estudos, com o o
 - Exibição de **cards de produtos**
 - **Carrinho persistente** em `localStorage`
 - Checkout com integração da **API ViaCEP**
-- Layout **responsivo** (mobile-first)
+- Layout **responsivo**
 - Organização modular em **CSS** e **JS**
 
 ---
@@ -120,17 +120,13 @@ e-commerce-js/
 
 ### 1. Clone o repositório:
 
-git clone https://github.com/queirogaraffael/e-commerce-js.git
-cd e-commerce-js
+git clone https://github.com/queirogaraffael/ecommerce-amz-clone-js
+cd ecommerce-amz-clone-js
 
 ⚠️ Alguns navegadores bloqueiam requisições locais ao products.json e à API ViaCEP. Para evitar problemas, rode um servidor simples:
 
 ### 2. Abra o arquivo index.html diretamente no navegador:
 
-Python 3
-python -m http.server 5173
-
-ou Node.js (http-server)
 npx http-server -p 5173
 
 ### 3. Acesse no navegador:
@@ -159,33 +155,28 @@ npx http-server -p 5173
 
 ---
 
-## 📸 Telas (exemplos)
+## 📸 Telas
 
-- Home / Catálogo
+### 🏠 Home / Catálogo
 
-- Carrinho lateral
+![Home](assets/telas/tela%201.png)  
+![Catálogo](assets/telas/tela%202.png)
 
-- Checkout (com ViaCEP)
+### 🛍️ Detalhes do Produto
 
-(adicione prints em /assets/screenshots/ e referencie aqui)
+![Detalhes](assets/telas/tela%205.png)
 
----
+### 🛒 Carrinho
 
-## 🗺️ Roadmap de Melhorias
+![Carrinho](assets/telas/tela%203.png)
 
-- Filtros por categoria avançados
+### 💳 Checkout (ViaCEP)
 
-- Busca em tempo real
+![Checkout](assets/telas/tela%204.png)
 
-- Cupom de desconto
+### 🗂️ Filtros por Categoria
 
-- Paginação ou scroll infinito
-
-- Integração com gateway de pagamento real (Stripe, Mercado Pago etc.)
-
-- Testes unitários (cart.js e checkout.js)
-
-- Feedback visual avançado (toasts, loaders)
+![Filtros](assets/telas/tela%206.png)
 
 ---
 
