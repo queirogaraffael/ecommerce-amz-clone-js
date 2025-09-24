@@ -28,7 +28,6 @@ export function setupCheckoutEvents() {
         cepSuccess.textContent = '';
     };
 
-    // Adiciona listener para desbloquear campos de endereço quando o usuário tenta digitar
     const addressInputs = [logradouroInput, bairroInput, cidadeInput, ufInput];
     addressInputs.forEach(input => {
         input.addEventListener('input', () => {
