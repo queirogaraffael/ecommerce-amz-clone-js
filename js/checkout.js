@@ -59,7 +59,6 @@ export function setupCheckoutEvents() {
                     cidadeInput.readOnly = false;
                     ufInput.readOnly = false;
                 } else {
-                    // Preenche apenas a cidade e o estado, deixando o resto em branco para o usuário
                     cidadeInput.value = data.localidade;
                     ufInput.value = data.uf;
                     cepSuccess.textContent = 'Cidade e estado encontrados!';
@@ -67,7 +66,6 @@ export function setupCheckoutEvents() {
                     logradouroInput.value = '';
                     bairroInput.value = '';
                     
-                    // Apenas cidade e estado serão somente leitura, o resto pode ser editado
                     logradouroInput.readOnly = false;
                     bairroInput.readOnly = false;
                     cidadeInput.readOnly = true;
