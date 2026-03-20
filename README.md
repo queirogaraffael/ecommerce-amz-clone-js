@@ -1,11 +1,11 @@
-# 🛒 E-commerce JS
+# E-commerce JS
 
 Projeto de **loja virtual** desenvolvido com **HTML5, CSS3 e JavaScript (ES6+)**.  
 Inclui catálogo de produtos dinâmico, carrinho de compras com persistência e fluxo de checkout com integração à API **ViaCEP** para preenchimento automático de endereço.
 
 ---
 
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto foi construído como parte de uma fase prática de estudos, com o objetivo de aplicar conceitos fundamentais de programação web:
 
@@ -26,7 +26,7 @@ A ideia foi simular um **e-commerce simples**, cobrindo todo o fluxo básico:
 
 ---
 
-## 🎯 Finalidade do Projeto
+## Finalidade do Projeto
 
 Este projeto foi construído como parte de uma fase prática de estudos, com o objetivo de aplicar conceitos de **lógica de programação, manipulação do DOM, OOP (classes), assíncrono (fetch/async/await)** e **tratamento de erros** em um caso realista de **e-commerce**.
 
@@ -40,7 +40,7 @@ Este projeto foi construído como parte de uma fase prática de estudos, com o o
 
 ---
 
-## 📌 Escopo Obrigatório (Mínimo Viável)
+## Escopo Obrigatório (Mínimo Viável)
 
 ### 1. Catálogo
 
@@ -70,20 +70,20 @@ Este projeto foi construído como parte de uma fase prática de estudos, com o o
   - Chamar a API **ViaCEP**
   - Autopreencher os campos de endereço
 
-#### ✅ Tratamento de erros:
+#### Tratamento de erros:
 
 - CEP incompleto ou inválido → mensagem clara
 - `{"erro": true}` → **“CEP não encontrado. Preencha manualmente.”**
 - Falha de rede → mantém campos editáveis + mensagem de falha
 
-#### ♿ Acessibilidade:
+#### Acessibilidade:
 
 - Mensagens em `aria-live`
 - Foco automático no campo **Número** após preenchimento bem-sucedido
 
 ---
 
-## ✨ Funcionalidades Implementadas
+## Funcionalidades Implementadas
 
 - Catálogo dinâmico a partir de `data/products.json`
 - Exibição de **cards de produtos**
@@ -94,7 +94,7 @@ Este projeto foi construído como parte de uma fase prática de estudos, com o o
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 e-commerce-js/
 
@@ -116,14 +116,14 @@ e-commerce-js/
 
 ---
 
-## 🚀 Como Executar Localmente
+## Como Executar Localmente
 
 ### 1. Clone o repositório:
 
 git clone https://github.com/queirogaraffael/ecommerce-amz-clone-js
 cd ecommerce-amz-clone-js
 
-⚠️ Alguns navegadores bloqueiam requisições locais ao products.json e à API ViaCEP. Para evitar problemas, rode um servidor simples:
+Alguns navegadores bloqueiam requisições locais ao products.json e à API ViaCEP. Para evitar problemas, rode um servidor simples:
 
 ### 2. Abra o arquivo index.html diretamente no navegador:
 
@@ -131,11 +131,11 @@ npx http-server -p 5173
 
 ### 3. Acesse no navegador:
 
-👉 http://localhost:5173
+http://localhost:5173
 
 ---
 
-## 🔧 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - HTML5 → marcação semântica
 
@@ -155,32 +155,32 @@ npx http-server -p 5173
 
 ---
 
-## 📸 Telas
+## Telas
 
-### 🏠 Home / Catálogo
+### Home / Catálogo
 
 ![Home](assets/telas/tela%201.png)  
 ![Catálogo](assets/telas/tela%202.png)
 
-### 🛍️ Detalhes do Produto
+### Detalhes do Produto
 
 ![Detalhes](assets/telas/tela%205.png)
 
-### 🛒 Carrinho
+### Carrinho
 
 ![Carrinho](assets/telas/tela%203.png)
 
-### 💳 Checkout (ViaCEP)
+### Checkout (ViaCEP)
 
 ![Checkout](assets/telas/tela%204.png)
 
-### 🗂️ Filtros por Categoria
+### Filtros por Categoria
 
 ![Filtros](assets/telas/tela%206.png)
 
 ---
 
-## 👨‍💻 Autores
+## Autores
 
 ### Raffael Queiroga
 
